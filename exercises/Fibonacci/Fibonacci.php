@@ -9,9 +9,21 @@ namespace Exercises\Fibonacci;
  * each consecutive number is the sum of the previous two.
  * For example [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ∞]
  *
- * @method static int get(int $index)
+ //* @method static int get(int $index)
  * @example Fibonacci::get(7) === 13
  */
 final class Fibonacci
 {
+    /**
+     * @param int $index
+     *
+     * @return int
+     */
+    public static function get(int $index): int
+    {
+        if ($index < 2) {
+            return $index;
+        }
+        return self::get($index - 1) + self::get($index - 2) ;
+    }
 }
