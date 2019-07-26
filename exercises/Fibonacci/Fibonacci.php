@@ -24,6 +24,6 @@ final class Fibonacci
         if ($index < 2) {
             return $index;
         }
-        return self::get($index - 1) + self::get($index - 2) ;
+        return self::get($index - 1) + self::get($index - 2);
     }
 }
